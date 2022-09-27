@@ -1,1 +1,14 @@
-<div>working</div>
+<main>
+  <div class="container mt-5">
+    <div class="row align-items-center flex-column">
+      <div class="col-3 pt-2">
+        <app-add-todo></app-add-todo>
+      </div>
+      <div class="col-3 pb-2">
+        <ul class="list-group" *ngFor="let todo of todos">
+          <app-list-todos [todo]="todo"></app-list-todos>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>

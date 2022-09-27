@@ -1,0 +1,17 @@
+<form class="row g-3" [formGroup]="todoObj">
+  <div class="col-auto">
+    <label for="todo-text" class="visually-hidden">Password</label>
+    <input
+      type="text"
+      class="form-control"
+      id="todo-text"
+      placeholder="Enter todo"
+      formControlName="todoText"
+    />
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3" (click)="addTodo()">
+      Add
+    </button>
+  </div>
+</form>
