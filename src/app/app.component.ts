@@ -9,32 +9,13 @@ import { TodoService } from './services/todo.service';
 })
 export class AppComponent {
 
-  todos!:Todo[];
-  // todos=[
-  //   {
-  //     text:"test todo"
-  //   },
-  //   {
-  //     text:"test2 todo"
-  //   },
-  //   {
-  //     text:"test3 todo"
-  //   }
-  // ]
+  // todos!:Todo[];
 
   constructor(
-    private todoService:TodoService,
+    public todoService:TodoService,
   ){}
 
     ngOnInit():void{
-      this.getTodos();
+      this.todoService.getTodos();
     }
-
-  getTodos():void{
-    this.todoService.getTodos()
-    .subscribe((res:Todo[])=>{
-      console.log("res is  " + res)
-      this.todos=res;
-    })
-  }
 }
