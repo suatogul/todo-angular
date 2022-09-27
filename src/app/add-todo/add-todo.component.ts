@@ -30,6 +30,7 @@ export class AddTodoComponent implements OnInit {
     .subscribe((res:any)=>{
       console.log(res);
       this.todoService.getTodos();
+      this.todoObj.patchValue({todoText:''});
       this._snackBar.open(res.todoText + ' todo added', '',{duration:2000});
     })
   }

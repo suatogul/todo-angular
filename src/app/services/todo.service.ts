@@ -16,18 +16,18 @@ export class TodoService {
   getTodos(){
     this.http.get<Todo[]>(this.apiUrl + '/todo')
     .subscribe((res:Todo[])=>{
-      console.log("res is  " + res)
       this.todos=res;
     })
     
   }
 
-
-
   addTodo(todo:Todo){
     return this.http.post(this.apiUrl + '/todo', todo)
   }
 
+  deleteTodo(todoId:number):Observable<any>{
+    return this.http.delete(this.apiUrl + '/todo/' + todoId);
+  }
 
 
 }

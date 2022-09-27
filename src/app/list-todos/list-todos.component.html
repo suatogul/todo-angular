@@ -9,6 +9,8 @@
     <span class="bg-white">{{ todo.todoText }}</span>
   </div>
   <div class="me-3">
-    <button class="btn btn-danger btn-sm p-2">del</button>
+    <button class="btn btn-danger btn-sm p-2" (click)="deleteTodo()">
+      del
+    </button>
   </div>
 </div>
